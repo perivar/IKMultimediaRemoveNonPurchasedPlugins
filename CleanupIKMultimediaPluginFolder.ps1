@@ -26,18 +26,16 @@ function MoveFilesExceptRecursively ($sourceDirectory, $destinationDirectory, $f
 
     #region move files (does not support recursive folders)
     Get-ChildItem $sourceDirectory -Filter "TR5 *" -File | 
-    Where-Object { $_.Name -notin $fileExcludeList } | 
-	
+    Where-Object { $_.Name -notin $fileExcludeList } | 	
     # To debug do a foreach on the list and output the filename
     #ForEach-Object {Write-Host $_.FullName}
-
-    # Move 
+    # Move file and force (overwrite if already exist) 
     Move-Item -Destination $destinationDirectory -Force
     #endregion
 
     #region move files (does support recursive folders)
     #Get-ChildItem $sourceDirectory -Recurse -Exclude $fileExcludeList | 
-    #Move-Item -Destination { Join-Path $destinationDirectory $_.FullName.Substring($sourceDirectory.length) }
+    #Move-Item -Destination { Join-Path $destinationDirectory $_.FullName.Substring($sourceDirectory.length) } -Force
     #endregion
 }
 
