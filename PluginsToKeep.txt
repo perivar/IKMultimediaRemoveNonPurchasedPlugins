@@ -10,8 +10,6 @@ TR5 Classic Multi Band Limiter.dll
 TR5 Classic Multi Band Limiter.vst3
 TR5 Linear Phase EQ.dll
 TR5 Linear Phase EQ.vst3
-TR5 Metering.dll
-TR5 Metering.vst3
 TR5 Opto Comp.dll
 TR5 Opto Comp.vst3
 TR5 VC-670.dll
